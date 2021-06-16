@@ -80,3 +80,30 @@ function diagonalDifference(arr) {
   return diff;
 }
 
+// Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+// Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to 10^-4 are acceptable.
+
+function plusMinus(arr) {
+  let positives = 0;
+  let negatives = 0;
+  let zeroes = 0;
+  let pRatio, nRatio, zRatio;
+  
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      positives++;
+    } else if(arr[i] === 0){
+      zeroes++; 
+    } else {
+      negatives++;
+    }
+  }
+  pRatio = parseFloat((positives/arr.length).toPrecision(7));
+  nRatio = parseFloat((negatives/arr.length).toPrecision(7));
+  zRatio = parseFloat((zeroes/arr.length).toPrecision(7));
+
+  console.log(pRatio)
+  console.log(nRatio)
+  console.log(zRatio)
+}
