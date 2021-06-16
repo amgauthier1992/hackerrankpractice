@@ -64,6 +64,8 @@ For example, the square matrix arr is shown below:
 The left-to-right diagonal = 15. The right to left diagonal = 17. Their absolute difference is 2. |15-17| = 2
 */
 
+//**JS doesnt support 2d arrays** Solution below isnt working but is close. Discussions section mentioned something about array of strings and .split() ?
+
 function diagonalDifference(arr) {
   let d1 = 0;
   let d2 = 0;
